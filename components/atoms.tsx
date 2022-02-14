@@ -1,4 +1,4 @@
-import { atom } from 'recoil'
+import { atom, atomFamily } from 'recoil'
 
 const imgListState = atom({
     key: 'imgListState',
@@ -10,4 +10,9 @@ const previewState = atom({
   default: ''
 });
 
-export {imgListState, previewState};
+const viewCountState = atomFamily<number, string>({
+  key: 'viewCountState',
+  default: 0
+});
+
+export {imgListState, previewState, viewCountState};
