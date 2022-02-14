@@ -5,4 +5,9 @@ const imgListState = atom({
     default: []
   });
 
-export {imgListState};
+const previewState = atom({
+  key: 'previewState',
+  default: ''
+});
+
+export {imgListState, previewState};
